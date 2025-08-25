@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Супер хоррор jump scare</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Хоррор</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      color: red;
+      font-family: "Creepster", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    button {
+      background: red;
+      color: black;
+      font-size: 30px;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: darkred;
+      color: white;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-<div class="flash" id="flash"></div>
-<div class="jump" id="jump"></div>
-<button class="button" id="scaryButton">Нажми меня</button>
-
-<audio id="hoverSound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
-<audio id="clickSound" src="https://www.soundjay.com/horror/sounds/horror-1.mp3"></audio>
-<audio id="flashSound" src="https://www.soundjay.com/horror/sounds/horror-2.mp3"></audio>
-<audio id="jumpSound" src="https://www.soundjay.com/horror/sounds/horror-3.mp3"></audio>
-
-<script src="script.js"></script>
+  <h1>👻 Войти, если осмелишься...</h1>
+  <button onclick="window.location.href='https://www.youtube.com/watch?v=oPLObjVAvIU&pp=ygUc0YDQuNC60YDQvtC70LsgMTAg0YfQsNGB0L7Qsg%3D%3D'">
+    Нажми меня
+  </button>
 </body>
 </html>
