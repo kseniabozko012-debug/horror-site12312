@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-family: 'Creepster', cursive, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 2rem;
+    color: red;
+    background: transparent;
+    border: 3px solid red;
+    cursor: pointer;
+    text-transform: uppercase;
+    animation: shake 0.5s infinite, glow 1s infinite alternate;
+    z-index: 2;
+}
+
+.button:hover {
+    color: black;
+    background: red;
+    box-shadow: 0 0 30px red;
+    transform: scale(1.1);
+}
+
+@keyframes shake {
+    0%,100%{transform:translate(0,0);}
+    25%{transform:translate(-5px,5px);}
+    50%{transform:translate(5px,-5px);}
+    75%{transform:translate(-5px,-5px);}
+}
+
+@keyframes glow {
+    0%{box-shadow:0 0 10px red;}
+    100%{box-shadow:0 0 30px red;}
+}
+
+body::after {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0; left:0;
+    background: url('https://images.unsplash.com/photo-1617196030733-f6e3b45a5182?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8aG9ycnJvcnxlbnwwfHx8fDE2OTMxMDUwODg&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+    opacity:0.2;
+    z-index:0;
+    filter: blur(5px);
+}
+
+.flash {
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:white;
+    opacity:0;
+    z-index:1;
+}
+
+.jump {
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    width:400px; height:400px;
+    background: url('https://i.imgur.com/3ZQ3k2D.png') no-repeat center/contain;
+    opacity:0;
+    z-index:3;
+}
+
+.shake-screen {
+    animation: screenShake 0.5s;
+}
+
+@keyframes screenShake {
+    0% { transform: translate(0,0); }
+    20% { transform: translate(-10px,10px); }
+    40% { transform: translate(10px,-10px); }
+    60% { transform: translate(-10px,-10px); }
+    80% { transform: translate(10px,10px); }
+    100% { transform: translate(0,0); }
+}
